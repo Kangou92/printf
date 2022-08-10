@@ -49,7 +49,7 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 			{
 				i += tmp + 1;
 				ret += f(args, output, flags, wid, prec, len);
-				continue
+				continue;
 			}
 			else if (*(format + i + tmp + 1) == '\0')
 			{
@@ -62,6 +62,7 @@ int run_printf(const char *format, va_list args, buffer_t *output)
 	}
 	cleanup(args, output);
 	return (ret);
+}
 /**
  * _printf - Outputs a formatted string.
  * @format: Character string to print - may contain directives.
